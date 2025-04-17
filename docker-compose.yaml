@@ -18,5 +18,5 @@ services:
         limits:
           memory: 32G
         reservations:
-          memory: 50G
+          memory: 32G
     restart: unless-stopped
