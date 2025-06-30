@@ -10,7 +10,7 @@ services:
       - CRAWL4AI_API_TOKEN=${CRAWL4AI_API_TOKEN}
       - GEMINI_API_KEY=${GEMINI_API_KEY}
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - MAX_CONCURRENT_TASKS=2
+      - MAX_CONCURRENT_TASKS=5
     volumes:
       - /dev/shm:/dev/shm
     deploy:
