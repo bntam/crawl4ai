@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   crawl4ai:
-    image: unclecode/crawl4ai:latest
+    image: unclecode/crawl4ai:all
     container_name: crawl4ai
     ports:
       - "11235:11235"
@@ -10,13 +10,12 @@ services:
       - CRAWL4AI_API_TOKEN=${CRAWL4AI_API_TOKEN}
       - GEMINI_API_KEY=${GEMINI_API_KEY}
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - MAX_CONCURRENT_TASKS=2
+      - MAX_CONCURRENT_TASKS=5
     volumes:
       - /dev/shm:/dev/shm
     deploy:
       resources:
         limits:
-          memory: 2G
+          memory: 4G
         reservations:
-          memory: 2G
-    restart: unless-stopped
+          memory: 1G
